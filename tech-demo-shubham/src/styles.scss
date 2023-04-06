@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+// COMMON CSS which will apply to all the files
+
+$redirect-btn-color : blue;   /* SCSS Allow to color to a variable and reuse it anywhere */
+
+html, body { height: 100%; }
+body { margin: 10; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: azure;
+}
+
+.redirect-button {
+    padding: 10px 24px;
+    background-color: $redirect-btn-color; 
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

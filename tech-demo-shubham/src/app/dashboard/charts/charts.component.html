@@ -1,0 +1,15 @@
+
+<!-- Routing through HTML Example using routerlink -->
+<button class="redirect-button charts-btn" routerLink="" > 
+  Go Back
+</button>
+
+<!-- Standard ng2 charts embedding code to define chart type, its data and further options -->
+<div class="chart-wrapper">
+    <canvas baseChart width="900" height="600"
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend">
+  </canvas>
+</div>
