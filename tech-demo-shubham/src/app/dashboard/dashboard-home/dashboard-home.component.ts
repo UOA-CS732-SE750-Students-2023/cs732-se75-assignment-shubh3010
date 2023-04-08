@@ -8,13 +8,50 @@ import { DashboardService } from '../services/dashboard.service';
   templateUrl: './dashboard-home.component.html',
   styleUrls: ['./dashboard-home.component.scss']
 })
-export class DashboardHomeComponent implements OnInit{
+export class DashboardHomeComponent implements OnInit {
   catFact: any;
   dataToChildComponent = 'Data successfully passed from dashboard component to here'
-
-  constructor(private router: Router,
+  friendslist = [
+    {
+      name: 'Nishant',
+      age: 25
+    },
+    {
+      name: 'Shailesh',
+      age: 45
+    },
+    {
+      name: 'Abhishek',
+      age: 36
+    },
+    {
+      name: 'Akshay',
+      age: 65
+    },
+    {
+      name: 'Ashish',
+      age: 12
+    },
+    {
+      name: 'Uday',
+      age: 31
+    },
+    {
+      name: 'Mayank',
+      age: 45
+    },
+    {
+      name: 'Raju',
+      age: 74
+    },
+  ];
+  isVisible: boolean = false;
+  displayMessage = 'Click to View List'
+  constructor(
+    // Dependency injection of router and service is done in component's constructor
+    private router: Router,
     private _snackBar: MatSnackBar,
-    private dashboardService : DashboardService
+    private dashboardService: DashboardService
   ) { }
 
 
@@ -31,15 +68,26 @@ export class DashboardHomeComponent implements OnInit{
   }
 
 
-  routeToCharts(){
+  routeToCharts() {
     this.router.navigate(['/dashboard/chart']); // navigation to previous page
   }
 
-  getCatData(){
+  getCatData() {
     // calling method from servie using observable to get data from API
-    this.dashboardService.getCatData().subscribe((response:any)=>{
-      this.catFact = response;      
-    })
+    this.dashboardService.getCatData().subscribe((response: any) => {
+      this.catFact = response;
+    }, err => console.log('Call cat error Error', err))
+
+  }
+
+  hideList() {
+    this.isVisible = !this.isVisible;
+    if (this.isVisible) {
+      this.displayMessage = 'Click to Hide List'
+    } else {
+      this.displayMessage = 'Click to View List'
+
+    }
 
   }
 

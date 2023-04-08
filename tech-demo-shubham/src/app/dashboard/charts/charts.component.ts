@@ -10,6 +10,7 @@ import { ChartConfiguration, ChartDataset, ChartOptions, Color } from 'chart.js'
 export class ChartsComponent {
   title = 'ng2-charts-demo';
 
+  // X axis labels for the line chart
    lineChartData: ChartConfiguration<'line'>['data'] = {
     labels: [
       'January',
@@ -25,6 +26,8 @@ export class ChartsComponent {
       'November',
       'December'
     ],
+
+    // Data to the chart
     datasets: [
       {
         data: [ 65, 59, 80, 81, 56, 55, 40, 81, 56, 55, 40,44,90 ],

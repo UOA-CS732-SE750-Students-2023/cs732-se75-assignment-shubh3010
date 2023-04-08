@@ -1,40 +1,51 @@
+<div class="body">
+  <h1>
+    Tech Demo Home
+  </h1>
 
-  <div  class="body">
-<h1>
-  Tech Demo Home
-</h1>
-
-    <div class="section">
+  <div class="section">
 
     <mat-tab-group class="card">
-        <mat-tab label="View Table">
-          <div >
-           <app-mat-table-demo  [parentData]="dataToChildComponent">  <!--  passing data to child component -->
-            </app-mat-table-demo>
-          </div>
-            </mat-tab>
+      <mat-tab label="View Table">
+        <div>
+          <app-mat-table-demo [parentData]="dataToChildComponent"> <!--  passing data to child component -->
+          </app-mat-table-demo>
+        </div>
+      </mat-tab>
 
-        <mat-tab label = "View Chart">
-          <div class="second-tab-sec">
+      <mat-tab label="View Chart">
+        <div class="second-tab-sec">
 
-          <button class="redirect-button" (click) = "routeToCharts()">  <!-- calling function on clic -->
+          <button class="redirect-button" (click)="routeToCharts()"> <!-- calling function on click -->
             Click Here to Redirect to Charts
           </button>
         </div>
-        </mat-tab>
+      </mat-tab>
 
-        </mat-tab-group>
-        </div>
-        <div class="section">
-
- 
-          <button class="button" (click)="openSnackBar(catFact.fact, 'close')" 
-           style="vertical-align:middle"><span>Click To View Cat Facts </span></button>
-           <div>
-            <!-- 2 way binding example -->
-             {{catFact.fact}}
-
-           </div>
-          
-              </div>
+    </mat-tab-group>
+  </div>
+  <div class="section section-2">
+    <div>
+      <!-- ng directive to handle if and else condition -->
+      <ul *ngIf="isVisible">
+        <!-- ng directive to handle a for loop -->
+        <li *ngFor="let item of friendslist">
+          {{ item.name }} is {{ item.age }} years old
+        </li>
+      </ul>
+      <button mat-stroked-button class="mat-raised-button" color="primary" (click)="hideList()">
+        <span>
+          <!-- Interpolation binding example -->
+          {{displayMessage}}
+        </span>
+      </button>
     </div>
+    <div>
+      <button class="button" (click)="openSnackBar(catFact.fact, 'close')" style="vertical-align:middle">
+        <span>
+          Click To Fetch Cat Facts
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
