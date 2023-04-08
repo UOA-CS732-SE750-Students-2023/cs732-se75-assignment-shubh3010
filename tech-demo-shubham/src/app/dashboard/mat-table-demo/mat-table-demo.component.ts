@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, Input, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface UserData {
   id: string;
@@ -52,21 +52,21 @@ const NAMES: string[] = [
 export class MatTableDemoComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>; // This variable serves as main input variable to mat table 
-  @ViewChild(MatPaginator)  paginator!: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @Input() parentData = ''; // decorate the property with @Input(). This recieves value from the parent data
 
 
   constructor() {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => this.createNewUser(k + 1));
+    const users = Array.from({ length: 100 }, (_, k) => this.createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
 
   // In angular lifecycle below method always runs first when the component is initialized
-  ngOnInit(){
+  ngOnInit() {
     console.log(this.parentData);
   }
 
@@ -86,17 +86,17 @@ export class MatTableDemoComponent implements AfterViewInit {
   }
 
 
-/** Builds and returns a new User. */
- createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+  /** Builds and returns a new User. */
+  createNewUser(id: number): UserData {
+    const name =
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
 
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-  };
- }
+    return {
+      id: id.toString(),
+      name: name,
+      progress: Math.round(Math.random() * 100).toString(),
+      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    };
+  }
 }

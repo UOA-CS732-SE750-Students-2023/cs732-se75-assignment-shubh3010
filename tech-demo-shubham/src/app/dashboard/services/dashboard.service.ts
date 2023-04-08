@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core'; 
-import { HttpClient } from '@angular/common/http'; 
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
@@ -8,12 +8,12 @@ import { Observable } from 'rxjs/internal/Observable';
 export class DashboardService {
 
   constructor(
-    private http: HttpClient 
+    private http: HttpClient
   ) { }
 
 
-  public getCatData(): Observable<any> { 
-    // Calling another API
-    return this.http.get('https://catfact.ninja/fact'); 
-    } 
+  public getCatData(): Observable<any> {
+    // Calling another API using HTTP client method
+    return this.http.get('https://catfact.ninja/fact');
+  }
 }
