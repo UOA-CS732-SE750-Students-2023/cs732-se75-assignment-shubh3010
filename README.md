@@ -9,6 +9,11 @@ Once node is installed please install Angular by running this command - npm inst
 In case you are not able to follow above command please refer below link
 https://www.simplilearn.com/how-to-install-angular-and-nodejs-on-windows-article
 
+## Install Node Modules
+
+Please run the command 'npm install' to install node modules required for the project
+Make sure to run the command inside tech-demo-shubham folder
+
 ## Run the Code
 
 Type `ng serve` in your terminal for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
