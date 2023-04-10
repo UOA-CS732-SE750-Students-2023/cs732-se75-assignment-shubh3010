@@ -12,7 +12,6 @@ https://www.simplilearn.com/how-to-install-angular-and-nodejs-on-windows-article
 ## Install Node Modules
 
 Please run the command 'npm install' to install node modules required for the project
-Make sure to run the command inside tech-demo-shubham folder
 
 ## Run the Code
 
