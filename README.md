@@ -1,4 +1,4 @@
-# TechDemoShubham
+# Angular 15 With Material UI & NG2-Charts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
