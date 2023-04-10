@@ -103,42 +103,7 @@ Angular is cross-platform, fast, scalable, has incredible tooling, and is loved 
 - [Angular Command Line (CLI)][cli]
 - [Angular Material][angularmaterial]
 
-## Changelog
 
-[Learn about the latest improvements][changelog].
-
-## Upgrading
-
-Check out our [upgrade guide](https://update.angular.io/) to find out the best way to upgrade your project.
-
-## Contributing
-
-### Contributing Guidelines
-
-Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules, and more.
-
-### Want to Help?
-
-Want to report a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/angular/angular/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/angular/angular/labels/good%20first%20issue)</kbd>.
-
-### Code of Conduct
-
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
-
-## Community
-
-Join the conversation and help the community.
-
-- [Twitter][twitter]
-- [Discord][discord]
-- [Gitter][gitter]
-- [YouTube][youtube]
-- [StackOverflow][stackoverflow]
-- Find a Local [Meetup][meetup]
-
-[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
-
-**Love Angular? Give our repo a star :star: :arrow_up:.**
 
 [contributing]: CONTRIBUTING.md
 [quickstart]: https://angular.io/start
